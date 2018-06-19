@@ -1,3 +1,7 @@
+$(document).ready(function () {
+  console.log('jQuery Ready!');
+});
+
 class Employee {
   constructor(name, employeeNumber, annualSalary, reviewRating) {
     this.name = name;
