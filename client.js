@@ -1,7 +1,12 @@
-$(document).ready(function () {
-  console.log('jQuery Ready!');
-});
+$(document).ready(start());
 
+function start() {
+  $('#submitButton').on('click', testFunction);
+}
+
+function testFunction() {
+  console.log('hi');
+}
 class Employee {
   constructor(name, employeeNumber, annualSalary, reviewRating) {
     this.name = name;
@@ -27,6 +32,7 @@ for (let i = 0; i < employees.length; i++) {
   console.log(employeeComp(employees[i]));
 }
 
+
 function employeeComp(employee) {
   let bonusPercentage = bonusCalculator(employee);
   let totalBonus = (bonusPercentage / 100) * parseInt(employee.annualSalary);
@@ -38,8 +44,13 @@ function employeeComp(employee) {
     totalCompensation: totalCompensation,
     totalBonus: totalBonus
   };
+
   return employeeBonus;
+
 }
+
+
+
 
 function bonusCalculator(employee) {
   let bonus = 0;
@@ -62,8 +73,10 @@ function bonusCalculator(employee) {
     bonus += 10;
   }
 
+
   if (bonus >= 13) {
     bonus = 13;
   }
+
   return bonus;
 }
