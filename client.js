@@ -1,4 +1,4 @@
-$(document).ready(start());
+$(document).ready(start);
 
 function start() {
   $('#submitButton').on('click', testFunction);
